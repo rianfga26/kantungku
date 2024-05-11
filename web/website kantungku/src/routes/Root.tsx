@@ -5,6 +5,7 @@ import {
 import '../App.css'
 import Home from "../components/home/Home";
 import Fitur from "../components/feature/Fitur";
+import Blog from "../components/blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/blog",
+    element: <Blog />
   }
 ])
 

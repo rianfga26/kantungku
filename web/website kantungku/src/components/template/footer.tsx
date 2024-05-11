@@ -4,6 +4,7 @@ export default function Footer() {
             <div className="container bg-ct flex p-20 justify-around">
                 <div>
                     <h1 className="text-main text-4xl font-bold">Kantungku</h1>
+                    <a href="https://kantugku.com"><p className="text-neutral-50 mt-3">kantungku.com</p></a>
                 </div>
                 <div>
                     <h1 className="text-neutral-50 font-semibold text-2xl">Layanan Pengaduan</h1>

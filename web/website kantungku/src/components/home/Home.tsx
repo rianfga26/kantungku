@@ -8,7 +8,7 @@ const Hero = () => {
                 <div className="p-28 mb-72">
                     <h1 className="text-4xl font-bold text-main mt-32">ATUR KEUANGAN SEKARANG INVESTASI KEMUDIAN</h1>
                     <p className="font-semibold mt-7 w-96">Atur keuangan anda menjadi lebih baik coba fitur menarik kantungku sekarang</p>
-                    <div className="flex gap-x-4 w-28 mt-9 w-72">
+                    <div className="flex gap-x-4 mt-9 w-72">
                         <a href="#"><img src="assets/home/playstore.svg" alt="playstore"/></a>
                         <a href="#"><img src="assets/home/appstore.svg" alt="appstore" /></a>
                     </div>
@@ -90,6 +90,25 @@ const Benefit = () => {
     );
 }
 
+const Subscribe = () => {
+    return(
+        <>
+            <div className="bg-[#D6FFF6] flex p-14 justify-around mt-40">
+                <div>
+                    <h1 className="text-[#A44A3F] font-bold text-2xl">dapatkan update informasi dari kantungku lebih cepat</h1>
+                </div>
+                <div className="flex space-x-3">
+                    <label className="input input-bordered flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
+                        <input type="text" className="grow" placeholder="Email" />
+                    </label>
+                    <button className="btn bg-[#A44A3F] text-neutral-50">Success</button>
+                </div>
+            </div>
+        </>
+    );
+}
+
 export default function Home() {
     return(
         <>
@@ -97,6 +116,7 @@ export default function Home() {
             <Hero />
             <SpillFitur />
             <Benefit />
+            <Subscribe />
             <Footer />
         </>
     );
