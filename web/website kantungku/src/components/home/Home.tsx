@@ -1,123 +1,131 @@
-import Footer from "../template/footer";
-import Navbar from "../template/navbar";
 
-const Hero = () => {
-    return(
-        <>
-            <div className="flex justify-between bg-[url('assets/home/bghero.jpg')] bg-no-repeat">
-                <div className="p-28 mb-72">
-                    <h1 className="text-4xl font-bold text-main mt-32">ATUR KEUANGAN SEKARANG INVESTASI KEMUDIAN</h1>
-                    <p className="font-semibold mt-7 w-96">Atur keuangan anda menjadi lebih baik coba fitur menarik kantungku sekarang</p>
-                    <div className="flex gap-x-4 mt-9 w-72">
-                        <a href="#"><img src="assets/home/playstore.svg" alt="playstore"/></a>
-                        <a href="#"><img src="assets/home/appstore.svg" alt="appstore" /></a>
-                    </div>
-                </div>
-                <div>
-                        <img src="assets/home/hp.png" alt="hp" className="w-[40em] mt-40 " />
-                </div>
-            </div>
-        </>
-    );
-}
-
-const SpillFitur = () => {
-    return(
-        <>  
-            <center>
-                <div className="w-[95%] bg-[#FFCDB2] flex relative -mt-80 h-[24rem] rounded-xl p-10 space-x-10  ">
-                    <div className="mt-10">
-                        <img src="assets/home/atur.svg" alt="atur kuangan" />
-                        <h2 className="font-semibold mt-4 text-main">Atur Keuangan dengan Baik</h2>
-                        <p className="text-left mt-2 text-ct">Atur keuangan anda lebih mudah dengan fitur yang tersedia di aplikasi kantungku</p>
-                    </div>
-                    <div className="mt-7">
-                        <img src="assets/home/ai.svg" alt="ai" />
-                        <h2 className="font-semibold mt-2 text-main">Generative AI</h2>
-                        <p className="text-left text-ct">Dapatkan kemudahan dalam pengelolaan keuangan dengan memanfaatakn artificial intelligence yang sudah tertanam dengan baik di aplikasi kantungku</p>
-                    </div>
-                    <div className="mt-9">
-                        <img src="assets/home/study.svg" alt="atur kuangan" />
-                        <h2 className="font-semibold mt-3 text-main">Edukasi</h2>
-                        <p className="text-left mt-2 text-ct">Anda akan mendapatkan seputar tips dari mulai mengelola keuangan sampai dengan investasi melalui aplikasi kantungku</p>
-                    </div>
-                </div>
-            </center>  
-        </>
-    );
-}
-
-const Benefit = () => {
-    return(
-        <>
-            <div className="container mt-36 p-10 ">
-                <center>
-                    <h1 className="text-center text-main text-2xl font-bold w-[50%]">Atur Keuanganmu dengan Mudah Sekarang Menggunakan Kantungku</h1>
-                    <p className="mt-4"><span className="font-semibold text-main">Kantungku</span> aplikasi pencatatan kuangan, track pengeluaran, atur budget dan buat tujuan keuangan</p>
-                </center>
-                
-
-                <div className="mt-20 flex justify-around p-20 space-x-20">
-                    <div className="flex-1">
-                        <img src="assets/home/catat.svg" alt="catat transaksi" className="w-[26rem]"/>
-                    </div>
-                    <div className="flex-1 mt-10">
-                        <h2 className="text-ct font-bold text-2xl">Catat Transaksi Secara Manual, Otomatis, dan Scan</h2>
-                        <p className="text-ct mt-6">Kamu dapat melakukan pencatatan keuangan secara manual, integrasi dengan e-wallet atau bank, dan dapat menggunakan scan struk pembelian</p>
-                    </div>
-                </div>
-                <div className="flex justify-around p-20 space-x-20">
-                    <div className="flex-1 mt-10">
-                        <h2 className="text-ct font-bold text-2xl">Atur Budget dan Tujuan Keuangan</h2>
-                        <p className="text-ct mt-6">Tentukan budget kamu untuk kebutuhanmu selain itu kamu juga dapat menentukan tujuan dari penggunaan uangmu</p>
-                    </div>
-                    <div className="flex-1">
-                        <img src="assets/home/tujuan.svg" alt="catat transaksi" className="w-[26rem]"/>
-                    </div>
-                </div>
-                <div className="flex justify-around p-20 space-x-20">
-                    <div className="flex-1">
-                        <img src="assets/home/invest.svg" alt="catat transaksi" className="w-[26rem]"/>
-                    </div>
-                    <div className="flex-1 mt-10">
-                        <h2 className="text-ct font-bold text-2xl">Mulai Belajar Investasi Sejak Dini</h2>
-                        <p className="text-ct mt-6">Setelah kamu dapat mengatur keuanganmu dengan baik mulailah berinvestasi dengan bantuan kantungku kamu dapat mudah belajar dan berinvestasi sejak dini</p>
-                    </div>
-                </div>
-
-            </div>
-        </>
-    );
-}
-
-const Subscribe = () => {
-    return(
-        <>
-            <div className="bg-[#D6FFF6] flex p-14 justify-around mt-40">
-                <div>
-                    <h1 className="text-[#A44A3F] font-bold text-2xl">dapatkan update informasi dari kantungku lebih cepat</h1>
-                </div>
-                <div className="flex space-x-3">
-                    <label className="input input-bordered flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
-                        <input type="text" className="grow" placeholder="Email" />
-                    </label>
-                    <button className="btn bg-[#A44A3F] text-neutral-50">Success</button>
-                </div>
-            </div>
-        </>
-    );
-}
+import Banner from "../../assets/home/demoapk.png";
+import Track from "../../assets/fitur/track.png";
+import Budget from "../../assets/fitur/budget.png";
+import AiSist from "../../assets/fitur/ai.png";
+import Card from "../card";
+import AppLayout from "../template/AppLayout";
+import CardFounder from "../cardFounder";
+import Galeh from "../../assets/founder/galeh.jpg";
+import Rio from "../../assets/founder/rio.jpg";
+import Rian from "../../assets/founder/rian.jpg";
 
 export default function Home() {
-    return(
-        <>
-            <Navbar />
-            <Hero />
-            <SpillFitur />
-            <Benefit />
-            <Subscribe />
-            <Footer />
-        </>
-    );
+  return (
+    <AppLayout>
+      {/* Hero */}
+      <div className="hero min-h-screen bg-base p-16">
+        <div className="hero-content flex-col-reverse lg:flex-row-reverse">
+          <img src={Banner} className="max-w-sm rounded-lg " />
+          <div>
+            <h1 className="text-5xl font-bold text-primary">
+              Financial Tracker that Understands You
+            </h1>
+            <p className="py-6 ">
+              Kantungku is here as a smart solution for managing your finances.
+              With this application, you can track expenses, record income,
+              create a budget, and achieve financial goals easily and
+              pleasantly.
+            </p>
+            <div className="join">
+              <input
+                type="email"
+                className="input input-bordered w-full max-w-xl join-item"
+              />
+              <button className="btn btn-primary join-item text-xl text-white capitalize">
+                join waitlist
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Feature */}
+      <div className="hero min-h-screen bg-base p-16">
+        <div className="hero-content w-full flex-col lg:flex-row">
+          <div className="flex flex-col w-full ">
+            <p className="text-2xl font-bold">
+              Explore Our <br />
+              Awesome <span className="text-primary">Features</span>
+            </p>
+            <p className="text-xl">
+              Discover the Unique Advantages That Set Us Apart
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+            <Card title="tracking" image={Track}>
+              <p>
+                Detailed expense reports help you track progress and achieve
+                financial goals more easily.
+              </p>
+            </Card>
+            <Card title="budgeting" image={Budget}>
+              <p>Group your budget easily using Kantungku</p>
+            </Card>
+            <Card title="AI assistant" image={AiSist}>
+              <p>
+                Kantungku AI Assistant makes personal finance fun and easy to
+                understand.
+              </p>
+            </Card>
+            <div className="flex items-center">more to come...</div>
+          </div>
+        </div>
+      </div>
+      {/* Team */}
+      <div className="hero min-h-screen bg-base p-16">
+        <div className="hero-content flex-col w-full">
+          <p className="text-2xl font-bold">
+            Our <span className="text-primary">Executive Team</span>
+          </p>
+          <p className="text-xl">
+            Meet the Visionary People Driving Our Success
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">
+            <CardFounder
+              name="Galeh Ariya Irwana"
+              title="Founder"
+              image={Galeh}
+            >
+              <p>With passion of innovation and drive to make different, he lead the team to achieve the vision of kantungku. 
+              </p>
+            </CardFounder>
+            <CardFounder
+              name="Rio Rizki Rodianto"
+              title="Bussiness Director"
+              image={Rio}
+            >
+              <p>Guiding kantungku through dynamic market and strategic planning to make sure our operation and our goals are met.</p>
+            </CardFounder>
+            <CardFounder
+              name="Rian Firgiawan Gusti Ananda"
+              title="Technology Director"
+              image={Rian}
+            >
+              <p>Kantungku tech wizard with creative problem solving and experience with cutting-edge technology push our product for the better.</p>
+            </CardFounder>
+          </div>
+        </div>  
+      </div>
+      {/* Contact Us */}
+      <div className="hero min-h-screen bg-base p-16">
+        <div className="hero-content flex-col w-full">
+            <p className="text-3xl font-semibold"><span className="text-primary font-bold">Chat</span> to our friendly team</p>
+            <div className="flex justify-around space-x-24 mt-12">
+                <div className="text-center">
+                   <span className="w-36 h-36 bg-primary rounded-full p-2">📧</span>
+                   <p>Our team is ready to help you</p>  
+                   <p>halo@kantungku.id</p>
+                </div>
+                <div className="text-center">
+                <span className="w-36 h-36 bg-primary rounded-full p-2">📞</span>
+                   <p>Our team is ready to help you</p>  
+                   <p>+62 8580-6926-548</p>
+                </div>
+            </div>
+            <span className="bg-primary rounded-full p-2 mt-12">🪧</span>
+            <p className="w-80 text-center">Address: Penambangan Plumpang Balongbendo Sidoarjo Jawa timur 61623 Indonesia</p>
+        </div>
+      </div>
+    </AppLayout>
+  );
 }

@@ -1,22 +1,32 @@
-const { addDynamicIconSelectors } = require('@iconify/tailwind');
+const {
+  addDynamicIconSelectors
+} = require('@iconify/tailwind');
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,js,ts,tsx}"],
   theme: {
-    fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Merriweather', 'serif'],
-    },
-    colors: {
-      'main': '#339989',
-      'ct': '#202A25' 
-    },
-    extend: {},
+
+    extend: {}
   },
+  daisyui: {
+    themes: [{
+      kantungku: {
+        "primary": "#339989",
+        "secondary": "#facc15",
+        "accent": "#1f2937",
+        "neutral": "#f3f4f6",
+        "base-100": "#ffffff",
+        "info": "#22d3ee",
+        "success": "#34d399",
+        "warning": "#fb923c",
+        "error": "#f43f5e",
+      },
+    }, ],
+  },
+
   plugins: [
     require('daisyui'),
     addDynamicIconSelectors(),
   ],
 }
-
