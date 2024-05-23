@@ -27,6 +27,6 @@ services:
   
   landing:
     build:
-      context: ./
+      context: ./web/landing
     ports:
       - 8093:80
