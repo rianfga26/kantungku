@@ -130,10 +130,10 @@ export default function Home() {
               <div>
                 <p>Our team is ready to help you</p>
                 <a
-                  href="mailto:halo@kantungku.id"
+                  href="mailto:halo@kantungku.com"
                   className="hover:text-primary"
                 >
-                  halo@kantungku.id
+                  halo@kantungku.com
                 </a>
               </div>
             </div>
