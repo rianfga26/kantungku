@@ -11,7 +11,7 @@ export default function card(props: Props) {
     <div className="card w-full bg-base-100 shadow-xl">
       {props.image && (
         <figure>
-          <img src={props.image} alt="banner" width={100}/>
+          <img src={props.image} alt="banner" width={100} className="p-2"/>
         </figure>
       )}
       <div className="card-body">

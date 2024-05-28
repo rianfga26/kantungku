@@ -1,0 +1,32 @@
+version: "3"
+services:
+  database:
+    image: postgis/postgis:16-3.4-alpine
+    ports:
+      - 5433:5432
+    volumes:
+      - ./api/database:/var/lib/postgresql/data
+    env_file:
+      - ./api/.env
+
+  cache:
+    image: redis:7.2.4-alpine
+
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8056:8055
+    volumes:
+      - ./api/extensions:/directus/extensions
+      - ./api/uploads:/directus/uploads
+    depends_on:
+      - cache
+      - database
+    env_file:
+      - ./api/.env
+  
+  landing:
+    build:
+      context: ./web/landing
+    ports:
+      - 8093:80
