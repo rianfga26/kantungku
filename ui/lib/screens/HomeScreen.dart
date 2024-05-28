@@ -12,8 +12,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(title: const Text('Home Screen')),
       body: Center(
         child: ElevatedButton(
-          onPressed: () => context.go('/details'),
-          child: const Text('Go to the Details screen'),
+          onPressed: () => context.go('/login'),
+          child: const Text('Go to the Login screen'),
         ),
       ),
     );
