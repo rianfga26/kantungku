@@ -3,14 +3,14 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kantungku/controllers/authentication.dart';
 
-class Register extends StatefulWidget {
-  const Register({super.key});
+class Registerscreen extends StatefulWidget {
+  const Registerscreen({super.key});
 
   @override
-  State<Register> createState() => _RegisterState();
+  registerWidget createState() => registerWidget();
 }
 
-class _RegisterState extends State<Register> {
+class registerWidget extends State<Registerscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,10 +51,10 @@ class _RegisterState extends State<Register> {
                           ),
                         ),
                         Container(
-                          child: const Column(
+                          child: Column(
                             children: <Widget>[
                               TextButton(
-                                onPressed: null,
+                                onPressed: () {context.go('/login');},
                                 child: Text(
                                   "Login",
                                   textAlign: TextAlign.right,
@@ -73,6 +73,7 @@ class _RegisterState extends State<Register> {
                   ],
                 ),
               ),
+              Padding(padding: EdgeInsets.all(10)),
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: const BoxDecoration(

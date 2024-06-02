@@ -27,6 +27,10 @@ final GoRouter _router = GoRouter(
         builder: (BuildContext context,GoRouterState state){
           return const LoginScreen();
         }),
+        GoRoute(path: 'register',
+        builder: (BuildContext context,GoRouterState state){
+          return const Registerscreen();
+        }),
       ],
     )
   ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kantungku/controllers/authentication.dart';
+
 import '../stores/LoginStore.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class LoginWidget extends State<LoginScreen> {
                           child: Column(
                             children: [
                               TextButton(
-                                onPressed: null,
+                                onPressed: () => context.go('/register'),
                                 child: Text(
                                   "Register",
                                   textAlign: TextAlign.right,
@@ -73,6 +74,7 @@ class LoginWidget extends State<LoginScreen> {
                   ],
                 ),
               ),
+              Padding(padding: EdgeInsets.all(10)),
               Container(
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
@@ -132,7 +134,7 @@ class LoginWidget extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(40)),
+              Padding(padding: EdgeInsets.all(30)),
               Container(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -150,12 +152,16 @@ class LoginWidget extends State<LoginScreen> {
                 ),
               ),
               SizedBox(
-                height: 80,
+                height: 50,
               ),
               Observer(
                 builder: (_) => ElevatedButton(
                   onPressed: () => login(store),
                   child: store.isLoading ? Text('Loading') : Text('Login'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 51, 153, 137),
+                    minimumSize: Size(250, 40),
+                    foregroundColor: Colors.white                  ),
                 ),
               ),
               Container(
