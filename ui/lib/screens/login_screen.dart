@@ -18,7 +18,7 @@ class LoginWidget extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20),
           child: Column(
@@ -28,7 +28,10 @@ class LoginWidget extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    const Image(image: AssetImage("images/logok.png")),
+                    const CircleAvatar(
+                      backgroundImage: AssetImage('images/logok.jpg'),
+                      radius: 50,
+                    ),
                     const Text(
                       "Login",
                       style: TextStyle(
