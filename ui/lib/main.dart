@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:kantungku/screens/DetailScreen.dart';
 import 'package:kantungku/screens/HomeScreen.dart';
 import 'package:kantungku/screens/login_screen.dart';
+import 'package:kantungku/screens/registerscreen.dart';
 
 void main() {
   runApp(const MainApp());
