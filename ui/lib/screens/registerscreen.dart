@@ -2,18 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kantungku/controllers/authentication.dart';
-import '../stores/login_store.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class Registerscreen extends StatefulWidget {
+  const Registerscreen({super.key});
 
   @override
-  LoginWidget createState() => LoginWidget();
+  registerWidget createState() => registerWidget();
 }
 
-class LoginWidget extends State<LoginScreen> {
-  final LoginStore store = LoginStore();
-
+class registerWidget extends State<Registerscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +29,7 @@ class LoginWidget extends State<LoginScreen> {
                       radius: 50,
                     ),
                     const Text(
-                      "Login",
+                      "Register",
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 40,
@@ -41,12 +38,12 @@ class LoginWidget extends State<LoginScreen> {
                     Row(
                       children: <Widget>[
                         Container(
-                          child: Column(
-                            children: [
+                          child: const Column(
+                            children: <Widget>[
                               Text(
-                                "Don't have account?",
+                                "You have an account?",
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 64, 63, 63),
+                                  color: Color.fromARGB(255, 64, 63, 63),
                                   fontSize: 20,
                                 ),
                               ),
@@ -55,15 +52,15 @@ class LoginWidget extends State<LoginScreen> {
                         ),
                         Container(
                           child: Column(
-                            children: [
+                            children: <Widget>[
                               TextButton(
-                                onPressed: () => context.go('/register'),
+                                onPressed: () {context.go('/login');},
                                 child: Text(
-                                  "Register",
+                                  "Login",
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
                                     color:
-                                        const Color.fromARGB(255, 51, 153, 137),
+                                        Color.fromARGB(255, 51, 153, 137),
                                     fontSize: 20,
                                   ),
                                 ),
@@ -78,26 +75,49 @@ class LoginWidget extends State<LoginScreen> {
               ),
               Padding(padding: EdgeInsets.all(10)),
               Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                          color: const Color.fromARGB(255, 51, 153, 137))),
+                          color: Color.fromARGB(255, 51, 153, 137))),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      "Email",
+                    const Text(
+                      "Name",
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 51, 153, 137),
+                          color: Color.fromARGB(255, 51, 153, 137),
                           fontSize: 20),
                     ),
                     Container(
-                      child: TextField(
-                        onChanged: (text) {
-                          store.setEmail(text);
-                        },
+                      child: const TextField(
+                        decoration: InputDecoration(
+                            hintText: "Insert Your Name",
+                            border: InputBorder.none),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Color.fromARGB(255, 51, 153, 137))),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const Text(
+                      "Email",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 51, 153, 137),
+                          fontSize: 20),
+                    ),
+                    Container(
+                      child: const TextField(
                         decoration: InputDecoration(
                             hintText: "Insert Your Email",
                             border: InputBorder.none),
@@ -107,26 +127,23 @@ class LoginWidget extends State<LoginScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
-                          color: const Color.fromARGB(255, 51, 153, 137))),
+                          color: Color.fromARGB(255, 51, 153, 137))),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       "Password",
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 51, 153, 137),
+                          color: Color.fromARGB(255, 51, 153, 137),
                           fontSize: 20),
                     ),
                     Container(
-                      child: TextField(
-                        onChanged: (text) {
-                          store.setPassword(text);
-                        },
+                      child: const TextField(
                         decoration: InputDecoration(
                             hintText: "Insert Your Password",
                             border: InputBorder.none),
@@ -136,52 +153,57 @@ class LoginWidget extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(30)),
               Container(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                          color: Color.fromARGB(255, 51, 153, 137))),
+                ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(padding: EdgeInsets.only(right: 1000)),
-                    TextButton(
-                      onPressed: null,
-                      child: Text("Forget Password",
-                          style: TextStyle(
-                            color: const Color.fromARGB(255, 51, 153, 137),
-                            fontSize: 20,
-                          )),
+                    const Text(
+                      "Confirm Password",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 51, 153, 137),
+                          fontSize: 20),
+                    ),
+                    Container(
+                      child: const TextField(
+                        decoration: InputDecoration(
+                            hintText: "Confirmation Your Password",
+                            border: InputBorder.none),
+                      ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 50,
+              Padding(padding: EdgeInsets.all(10)),
+              Padding(padding: EdgeInsets.all(10)),
+              ElevatedButton(onPressed: (){}, child: const Text('Register'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 51, 153, 137),
+                minimumSize: Size(250, 40),
+                foregroundColor: Colors.white
               ),
-              Observer(
-                builder: (_) => ElevatedButton(
-                  onPressed: () => login(store),
-                  child: store.isLoading ? Text('Loading') : Text('Login'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 51, 153, 137),
-                    minimumSize: Size(250, 40),
-                    foregroundColor: Colors.white                  ),
-                ),
               ),
               Container(
                 child: Row(
                   children: <Widget>[
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.all(30),
+                        margin: const EdgeInsets.all(30),
                         color: Colors.black,
                         height: 1,
                       ),
                     ),
                     Container(
-                      child: Text("OR"),
+                      child: const Text("OR"),
                     ),
                     Expanded(
                       child: Container(
-                        margin: EdgeInsets.all(30),
+                        margin: const EdgeInsets.all(30),
                         color: Colors.black,
                         height: 1,
                       ),
@@ -194,17 +216,17 @@ class LoginWidget extends State<LoginScreen> {
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   border: Border.all(),
                 ),
-                child: Row(
+                child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      // Image(
-                      //   image: AssetImage('assets/google.png'),
-                      //   width: 70,
-                      //   height: 70,
-                      // ),
+                      Image(
+                        image: AssetImage('images/google.png'),
+                        width: 70,
+                        height: 70,
+                      ),
                       Text(
                         "Sign With Google",
                         style: TextStyle(

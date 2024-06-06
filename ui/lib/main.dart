@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:kantungku/screens/detail_screen.dart';
 import 'package:kantungku/screens/home_screen.dart';
 import 'package:kantungku/screens/login_screen.dart';
+import 'package:kantungku/screens/registerscreen.dart';
 import 'package:kantungku/shared/theme/app_theme.dart';
 
 void main() {
@@ -23,11 +24,14 @@ final GoRouter _router = GoRouter(
             return const DetailsScreen();
           },
         ),
-        GoRoute(
-            path: 'login',
-            builder: (BuildContext context, GoRouterState state) {
-              return const LoginScreen();
-            }),
+        GoRoute(path: 'login',
+        builder: (BuildContext context,GoRouterState state){
+          return const LoginScreen();
+        }),
+        GoRoute(path: 'register',
+        builder: (BuildContext context,GoRouterState state){
+          return const Registerscreen();
+        }),
       ],
     )
   ],
