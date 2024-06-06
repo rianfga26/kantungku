@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:kantungku/controllers/authentication.dart';
-import '../stores/LoginStore.dart';
+import '../stores/login_store.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -26,8 +26,12 @@ class LoginWidget extends State<LoginScreen> {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    const Image(image: AssetImage("images/logok.png")),
+                  children: [
+                    const Image(
+                      image: AssetImage('assets/google.png'),
+                      width: 100,
+                      height: 100,
+                    ),
                     const Text(
                       "Login",
                       style: TextStyle(
@@ -192,11 +196,11 @@ class LoginWidget extends State<LoginScreen> {
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image(
-                        image: AssetImage('images/google.png'),
-                        width: 70,
-                        height: 70,
-                      ),
+                      // Image(
+                      //   image: AssetImage('assets/google.png'),
+                      //   width: 70,
+                      //   height: 70,
+                      // ),
                       Text(
                         "Sign With Google",
                         style: TextStyle(

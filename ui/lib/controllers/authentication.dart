@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:kantungku/helpers/api_instance.dart';
 import 'package:kantungku/helpers/encrypted_storage.dart';
 import 'package:kantungku/models/login.dart';
-import 'package:kantungku/stores/LoginStore.dart';
+import 'package:kantungku/stores/login_store.dart';
 
 void login(LoginStore store) async {
   store.toggleLoading(); //true
