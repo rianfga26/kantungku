@@ -28,8 +28,8 @@ class LoginWidget extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     const CircleAvatar(
-                      backgroundImage: AssetImage('images/logok.jpg'),
-                      radius: 50,
+                      backgroundImage: AssetImage('assets/logo.png'),
+                      radius: 20,
                     ),
                     const Text(
                       "Login",
@@ -41,12 +41,12 @@ class LoginWidget extends State<LoginScreen> {
                     Row(
                       children: <Widget>[
                         Container(
-                          child: Column(
+                          child: const Column(
                             children: [
                               Text(
                                 "Don't have account?",
                                 style: TextStyle(
-                                  color: const Color.fromARGB(255, 64, 63, 63),
+                                  color: Color.fromARGB(255, 64, 63, 63),
                                   fontSize: 20,
                                 ),
                               ),
@@ -57,13 +57,12 @@ class LoginWidget extends State<LoginScreen> {
                           child: Column(
                             children: [
                               TextButton(
-                                onPressed: () => context.go('/register'),
-                                child: Text(
+                                onPressed: () => context.goNamed('register'),
+                                child: const Text(
                                   "Register",
                                   textAlign: TextAlign.right,
                                   style: TextStyle(
-                                    color:
-                                        const Color.fromARGB(255, 51, 153, 137),
+                                    color: Color.fromARGB(255, 51, 153, 137),
                                     fontSize: 20,
                                   ),
                                 ),
@@ -76,21 +75,21 @@ class LoginWidget extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(10)),
+              const Padding(padding: EdgeInsets.all(10)),
               Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
                   border: Border(
-                      bottom: BorderSide(
-                          color: const Color.fromARGB(255, 51, 153, 137))),
+                      bottom:
+                          BorderSide(color: Color.fromARGB(255, 51, 153, 137))),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       "Email",
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 51, 153, 137),
+                          color: Color.fromARGB(255, 51, 153, 137),
                           fontSize: 20),
                     ),
                     Container(
@@ -98,7 +97,7 @@ class LoginWidget extends State<LoginScreen> {
                         onChanged: (text) {
                           store.setEmail(text);
                         },
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             hintText: "Insert Your Email",
                             border: InputBorder.none),
                       ),
@@ -107,19 +106,19 @@ class LoginWidget extends State<LoginScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(10),
+                decoration: const BoxDecoration(
                   border: Border(
-                      bottom: BorderSide(
-                          color: const Color.fromARGB(255, 51, 153, 137))),
+                      bottom:
+                          BorderSide(color: Color.fromARGB(255, 51, 153, 137))),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       "Password",
                       style: TextStyle(
-                          color: const Color.fromARGB(255, 51, 153, 137),
+                          color: Color.fromARGB(255, 51, 153, 137),
                           fontSize: 20),
                     ),
                     Container(
@@ -127,7 +126,7 @@ class LoginWidget extends State<LoginScreen> {
                         onChanged: (text) {
                           store.setPassword(text);
                         },
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                             hintText: "Insert Your Password",
                             border: InputBorder.none),
                         obscureText: true,
@@ -136,9 +135,9 @@ class LoginWidget extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(30)),
+              const Padding(padding: EdgeInsets.all(30)),
               Container(
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
                     Padding(padding: EdgeInsets.only(right: 1000)),
@@ -146,24 +145,24 @@ class LoginWidget extends State<LoginScreen> {
                       onPressed: null,
                       child: Text("Forget Password",
                           style: TextStyle(
-                            color: const Color.fromARGB(255, 51, 153, 137),
+                            color: Color.fromARGB(255, 51, 153, 137),
                             fontSize: 20,
                           )),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Observer(
                 builder: (_) => ElevatedButton(
-                  onPressed: () => login(store),
+                  onPressed: () => login(context, store),
                   child: store.isLoading ? Text('Loading') : Text('Login'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 51, 153, 137),
-                    minimumSize: Size(250, 40),
-                    foregroundColor: Colors.white                  ),
+                      backgroundColor: Color.fromARGB(255, 51, 153, 137),
+                      minimumSize: Size(250, 40),
+                      foregroundColor: Colors.white),
                 ),
               ),
               Container(
@@ -197,7 +196,7 @@ class LoginWidget extends State<LoginScreen> {
                   color: Color.fromARGB(255, 255, 255, 255),
                   border: Border.all(),
                 ),
-                child: Row(
+                child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       // Image(
